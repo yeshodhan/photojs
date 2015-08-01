@@ -410,6 +410,15 @@ module.exports = function (grunt) {
           dest: '.temp/concat/<%= yeoman.scripts %>'
         }]
       }
+    },
+
+    parallel: {
+      assets: {
+        options: {
+          grunt: true
+        },
+        tasks: ['ionic:serve', 'watch']
+      }
     }
 
   });
@@ -507,8 +516,9 @@ module.exports = function (grunt) {
       return grunt.task.run(['compress', 'ionic:serve']);
     }
 
-    grunt.config('concurrent.ionic.tasks', ['ionic:serve', 'watch']);
-    grunt.task.run(['wiredep', 'init', 'concurrent:ionic']);
+    //grunt.config('concurrent.ionic.tasks', ['ionic:serve', 'watch']);
+    //grunt.task.run(['wiredep', 'init', 'concurrent:ionic']);
+    grunt.task.run(['wiredep', 'init', 'concurrent:ionic', 'parallel:assets']);
   });
   grunt.registerTask('emulate', function() {
     grunt.config('concurrent.ionic.tasks', ['ionic:emulate:' + this.args.join(), 'watch']);
