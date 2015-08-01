@@ -27,7 +27,7 @@ Make sure you are under the project root directory ( web or mobile ). Run the be
 ```bash
 echo "setup: installing node dependencies using npm"
 npm install
-echo "setup: installing client dependencies using bower
+echo "setup: installing client dependencies using bower"
 bower install
 ```
 
