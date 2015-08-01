@@ -22,7 +22,7 @@ npm install -g bower grunt grunt-cli yo
 
 ## Installation 
 
-Make sure you are at the project root directory. Run the below commands. This may take about 2-3 minutes depending upon your connection speed.
+Make sure you are under the project root directory ( web or mobile ). Run the below: This may take about 2-3 minutes depending upon your connection speed.
 
 ```bash
 echo "setup: installing node dependencies using npm"
